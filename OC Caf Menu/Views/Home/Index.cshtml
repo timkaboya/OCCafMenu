@@ -1,0 +1,70 @@
+﻿@model OC_Caf_Menu.Models.Cafeteria
+
+@{
+    ViewBag.Title = "OC Cafeteria Menu";
+}
+
+<h2>Cafeteria Menu</h2>
+
+@if (ViewBag.MealsException == 0)
+{
+    foreach (var i in Model.Meals)
+    {
+    
+        <p> i.mealName</p>
+    
+        foreach (var j in i.Lines)
+        {
+            <table>
+            <tr>
+            <td> j.lineName</td>
+            </tr>
+             foreach (var k in j.ItemList)
+             {   <tr>
+                 <td>Item Name: </td>
+                 <td>k.itemName</td>
+                 </tr>
+                 <tr>
+                 <td>Food Name: </td>
+                 <td>k.foodName</td>
+                 </tr>
+                 <tr>
+                 <td>Serving Size: </td>
+                 <td>k.foodServingSize</td>
+                 </tr>
+                 <tr>
+                 <td>Calories: </td>
+                 <td>k.foodCalories</td>
+                 </tr>
+                 <tr>
+                 <td>Fat: </td>
+                 <td>k.foodFat</td>
+                 </tr>
+                 <tr>
+                 <td>Cholesterol</td>
+                 <td>k.foodCholesterol</td>
+                 </tr>
+                 <tr>
+                 <td>Sodium: </td>
+                 <td>k.foodSodium</td>
+                 </tr>
+                 <tr>
+                 <td>Potasium: </td>
+                 <td>k.foodPotassium</td>
+                 </tr>
+                 <tr>
+                 <td>Carbohydrates: </td>
+                 <td>k.foodCarbhyrate</td>
+                 </tr>
+                 <tr>
+                 <td>Protein: </td>
+                 <td>k.foodProtein</td>
+                 </tr>
+                 }
+                </table> 
+        }
+    }
+    
+    
+}
+    
